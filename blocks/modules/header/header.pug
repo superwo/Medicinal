@@ -1,2 +1,39 @@
 header.mainheader
-  h1 Hello!
+  .top-line
+    .container
+      ul.contacts
+        li.contacts__item.contacts__item--phone
+          a(href="tel:00893434895463") +8934-3489-5463
+        li.contacts__item.contacts__item--email
+          a(href="mailto:support@email.com") support@email.com
+      ul.socials
+        li.socials__item.socials__item--f <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        li.socials__item.socials__item--tw <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        li.socials__item.socials__item--g <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+        li.socials__item.socials__item--p <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+        li.socials__item.socials__item--in <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+
+  .top-menu
+    .container
+      .logo
+        img(src="img/logo.png").logo__img
+
+      ul.main-navigation
+        li.main-navigation__item
+          a(href="#").main-navigation__link Home
+        li.main-navigation__item
+          a(href="#").main-navigation__link Pages
+        li.main-navigation__item
+          a(href="#").main-navigation__link Services
+        li.main-navigation__item
+          a(href="#").main-navigation__link Doctors
+        li.main-navigation__item
+          a(href="#").main-navigation__link Departments
+        li.main-navigation__item
+          a(href="#").main-navigation__link blog
+        li.main-navigation__item
+          a(href="#").main-navigation__link Contact
+
+      .search
+        a(href="#").search__link
+          i.fa.fa-search

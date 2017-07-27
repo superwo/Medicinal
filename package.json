@@ -1,8 +1,12 @@
 {
-  "name": "starthtml",
+  "name": "medicinal",
   "version": "1.0.0",
-  "description": "Simple Start Html",
+  "description": "A Medicinal HTML Template",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superwo/Medicinal.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.11",
-    "del": "^2.2.2",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-cache": "^0.4.6",
@@ -23,13 +27,18 @@
     "gulp-plumber": "^1.1.0",
     "gulp-pug": "^3.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
+    "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
     "gulp-svg-sprite": "^1.3.6",
     "gulp-svgmin": "^1.2.3",
-    "gulp-uglify": "^2.1.2",
+    "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "gulp.spritesmith": "^6.2.1",
     "vinyl-ftp": "^0.6.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/superwo/Medicinal/issues"
+  },
+  "homepage": "https://github.com/superwo/Medicinal#readme",
+  "dependencies": {}
 }
