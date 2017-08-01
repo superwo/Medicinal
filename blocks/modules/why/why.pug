@@ -1,0 +1,14 @@
+mixin whyItem(icon, title, text)
+  li.why__item
+    .why__icon
+      +icon(icon)
+    span.why__title= title
+    p.why__text= text
+      
+section#why
+  ul.why
+    +whyItem("heart", "Free Checkup", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor.")
+    
+    +whyItem("car", "24 hours ambulance", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor.")
+    
+    +whyItem("test", "Qualified Doctors", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor.")

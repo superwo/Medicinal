@@ -3,18 +3,72 @@ input[type="password"],
 input[type="tel"],
 input[type="email"],
 textarea
-  font: normal 14px/14px Arial, sans-serif
-  height: 40px
-  padding: 0 15px
-  color: #000
-  background: #fff
-  border: 1px solid #ccc
-  &.form-control
-    display: block
+  font-family: $default-font
+  font-size: 14px
+  line-height: 1.1
+  padding: 15px 0
+  color: #fff
+  background: transparent
+  border: none
+  border-bottom: 1px solid #78a8f0
+  display: block
+  width: 100%
+
+.form
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  &__control
     width: 100%
+    position: relative
+    margin-bottom: 25px
+    &:last-of-type
+      margin-bottom: 0
+    label
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%) scale(1)
+      transform-origin: left
+      transition: all 200ms ease-in-out
+      opacity: 1
+    input
+      &:focus, &:not(:placeholder-shown)
+        + label
+          opacity: 0.5
+          transform: translateY(-180%) scale(0.8)
+    textarea, &:not(:placeholder-shown)
+      &:focus
+        + label
+          opacity: 0.5
+          transform: translateY(-350%) scale(0.8)
+  &--half
+    .form__control
+      width: 44%
+      &--full
+        width: 100%
 
 textarea
   resize: none
   height: auto
-  min-height: 100px
-  padding-top: 10px
+  min-height: 50px
+  // padding-top: 50px
+
+.booking-button
+  position: absolute
+  bottom: 30px
+  right: 0
+  display: block
+  width: 45px
+  height: 45px
+  background-color: $accent-color
+  color: #fff
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2)
+  cursor: pointer
+  border: none
+  border-radius: 50%
+  transition: all 100ms ease
+  &:hover
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5)

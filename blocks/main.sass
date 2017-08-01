@@ -3,30 +3,31 @@
 @import "sass-base/smart-grid"
 @import "sass-base/vars"
 @import "sass-base/btn"
+@import "sass-base/forms"
 @import "sass-base/mixins"
 
 *::-webkit-input-placeholder
-	color: #666
+	color: transparent
 	opacity: 1
 
 *:-moz-placeholder
-	color: #666
+	color: transparent
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: transparent
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: transparent
 	opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+	color: $accent-color
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+	color: #fff
 
 html, body
 	height: 100%
@@ -39,11 +40,79 @@ body
 	position: relative
 	line-height: 1.75
 	font-family: $default-font
+	color: $text-color
 	overflow-x: hidden
 	opacity: 1
 
+.section-header
+	text-align: center
+.section-title
+	display: block
+	font-family: $bold-font
+	font-size: 30px
+	white-space: nowrap
+	color: $title-color
+	text-transform: uppercase
+	position: relative
+	margin-top: 0px
+	line-height: 1.5
+
+	&::after
+		position: absolute
+		display: block
+		content: ''
+		bottom: -22px
+		left: 50%
+		transform: translateX(-50%)
+		background: url(../img/underline-accent.png) no-repeat
+		+sizer(37px, 14px)
+.section-title--white
+	color: #fff
+	&::after
+		background: url(../img/underline-white.png)
+
+.section-subtitle
+	font-family: $bold-font
+	display: inline-block
+	background-color: #fff
+	color: $main-color
+	padding: 6px 17px 4px
+	line-height: 1
+	&__last
+		color: $accent-color
 .container
 	+wrapper()
+
+.box
+	background-color: $main-color
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15)
+	border-radius: 5px
+	color: #fff
+
+	&__title
+		background-color: $accent-color
+		border-top-left-radius: 5px
+		border-top-right-radius: 5px
+		text-align: center
+		span
+			padding: 27px
+			display: block
+			font-family: $bold-font
+			text-transform: uppercase
+			font-size: 20px
+			line-height: 1
+
+	&__content
+		padding: 20px 50px 60px
+
+	&__list-item
+		border-bottom: 1px solid #78a8f0
+		display: flex
+		justify-content: space-between
+		padding: 10px 0
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
 
 a, a:hover, a:focus
 	text-decoration: none
@@ -59,4 +128,7 @@ ul, li
 	height: auto
 @import "modules/header/header"
 @import "modules/banner/banner"
+@import "modules/prenotation/prenot"
+@import "modules/why/why"
+@import "modules/about/about"
 @import "sass-base/media" // Всегда в конце

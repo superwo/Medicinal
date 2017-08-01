@@ -1,0 +1,50 @@
+section.prenotation
+  .prenotation__container
+    .prenotation__form
+      .box
+        .box__title
+          span get started booking now!
+        .box__content
+          form(method="post")
+            .form.form--half
+              .form__control
+                input(type="text", id="name", required, placeholder="Full Name")
+                label(for="name") Full Name
+              .form__control
+                input(type="email", id="email", required, placeholder="Email")
+                label(for="email") Email
+              .form__control
+                input(type="text", id="phone", required, placeholder="Phone")
+                label(for="phone") Phone
+              .form__control
+                input(type="text", id="availDate", required, placeholder="Available ON")
+                label(for="availDate") Available On
+              .form__control
+                input(type="text", id="service", required, placeholder="Type of Service")
+                label(for="service") Type of Service
+              .form__control
+                input(type="text", id="doctor", required, placeholder="Doctor")
+                label(for="doctor") Doctor
+              .form__control.form__control--full
+                textarea(id="message", required, placeholder="Message")
+                label(for="message") Message
+              button(type="submit").booking-button
+                i.fa.fa-paper-plane
+            
+    .prenotation__hours
+      .box
+        .box__title
+          span Our Working Hours
+        .box__content
+          ul.box__list
+            li.box__list-item
+              span Monday – Friday
+              span 8.00 – 17.00
+            li.box__list-item
+              span Saturday
+              span 9.00 – 17.00
+            li.box__list-item
+              span Sunday
+              span 9.00 – 15.00
+        .prenotation__buttons
+          a(href="#").btn.btn--accent doctors schedule

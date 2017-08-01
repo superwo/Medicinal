@@ -1,0 +1,63 @@
+.why
+  +row-flex()
+  +wrapper()
+  +justify-content(space-between)
+  counter-reset: my-counter
+  margin-bottom: 110px
+
+  &__item
+    +size(4)
+    +size-sm(12)
+    text-align: center
+    +tablets-max
+      margin-bottom: 70px
+    &:hover
+      .why__icon
+        box-shadow: 0 3px 16px rgba(0, 0, 0, 0.15)
+        &::after
+          background-color: $accent-color
+      .why__title
+        color: $accent-color
+
+  &__icon
+    +sizer(100px)
+    margin: 0 auto
+    border-radius: 50%
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15)
+    position: relative
+    margin-bottom: 25px
+    transition: all 200ms ease-in-out
+
+    &::after
+      content: counter(my-counter, decimal-leading-zero)
+      counter-increment: my-counter
+      position: absolute
+      +sizer(30px)
+      background-color: $main-color
+      color: #fff
+      transition: all 200ms ease-in-out
+      line-height: 35px
+      top: 0
+      left: 0
+      border-radius: 50%
+      font-family: $medium-font
+
+    svg
+      max-width: 100%
+      max-height: 100%
+      transform: scale(0.45)
+      fill: $main-color
+
+  &__title
+    font-family: $bold-font
+    transition: all 200ms ease-in-out
+    font-size: 16px
+    text-transform: uppercase
+    white-space: nowrap
+    color: $main-color
+    margin-bottom: 25px
+    display: block
+  &__text
+    line-height: 28px
+    max-width: 290px
+    margin: 0 auto
