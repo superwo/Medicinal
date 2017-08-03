@@ -1,3 +1,25 @@
+mixin servicesItem(title, icon, colorIcon, isActive)
+  if isActive
+    .services__item.services__item--active
+      span(style="background-color:" + colorIcon).services__item-icon
+        i(class= icon)
+      span.services__item-title= title
+      p.services__item-text Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem
+  else
+    .services__item
+      span(style="background-color:" + colorIcon).services__item-icon
+        i(class= icon)
+      span.services__item-title= title
+      p.services__item-text Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem
+  .services__item-descr
+    .services__item-image
+      img(src="img/exam.jpg", alt="Checkup")
+    .services__item-inner
+      span.services__item-title= title
+      p.services__item-text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.
+    span.services__item-plus
+      i.fa.fa-plus
+
 section#about.about
   img(src="img/doctors.png", alt="Our Team").about__img
   .about__content
@@ -8,3 +30,21 @@ section#about.about
     p.about__text Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate. Consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
     
     a(href="#").btn.btn--white Explore More
+
+section#services.services
+  header.section-header
+    span.section-subtitle How We Work
+    h2.section-title Medicative Services
+  
+  .services__content
+    .services__list.services__list--left
+      +servicesItem('Gynecological Services', "fa fa-heartbeat", '#88cb01')
+      +servicesItem('Medical Checkup', 'fa fa-stethoscope', '#bb3cdb', true)
+      +servicesItem('Cardiothoracic Surgery', 'fa fa-user-md', '#00adef')
+      
+    //- .services__descr Descr
+    
+    .services__list.services__list--right
+      +servicesItem('General Surgery', "fa fa-wheelchair", '#7c4ddb')
+      +servicesItem('Ambulance Services', 'fa  fa-ambulance', '#ffca00')
+      +servicesItem('Cardiovascular Diseases', 'fa fa-hospital-o', '#f36523')

@@ -1,8 +1,12 @@
 .about
   text-align: center
+  position: relative
+  margin-bottom: -284px
+  z-index: 10
   &__img
     display: block
     margin: 0 auto
+    max-width: 100%
   &__content
     +wrapper
     box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15)
@@ -15,3 +19,103 @@
     line-height: 28px
     max-width: 800px
     color: #fff
+
+.services
+  background-color: #f1f7fd
+  padding-top: 400px
+  padding-bottom: 130px
+
+  &__content
+    padding-top: 70px
+    position: relative
+    +row-flex
+    +wrapper
+    +justify-content(space-between)
+
+  &__list
+    &--right
+      .services__item
+        text-align: left
+        padding-right: 0
+        padding-left: 80px
+        &-icon
+          right: auto
+          left: 0
+
+  &__item
+    position: relative
+    padding-right: 80px
+    margin-bottom: 50px
+    text-align: right
+    cursor: pointer
+    &--active + .services__item-descr
+      display: block
+
+    &:hover, &--active
+      .services__item-icon
+        box-shadow: 0 3px 16px rgba(0, 0, 0, 0.2)
+      .services__item-title
+        color: $main-color
+        transition: all 500ms ease-in-out
+    &-title
+      color: $title-color
+      display: block
+      font-family: $medium-font
+      font-size: 18px
+      transition: all 200ms ease-in-out
+
+    &-icon
+      display: block
+      position: absolute
+      +sizer(56px)
+      border-radius: 50%
+      transition: all 200ms ease-in-out
+      top: 10px
+      right: 0
+      text-align: center
+      line-height: 62px
+      color: #fff
+      font-size: 21px
+
+    &-text
+      line-height: 28px
+      max-width: 280px
+    &-image
+      height: 230px
+      overflow: hidden
+      img
+        width: 100%
+
+    &-plus
+      display: block
+      position: absolute
+      top: 208px
+      left: 50%
+      transform: translateX(-50%)
+      +sizer(44px)
+      background-color: $accent-color
+      color: #fff
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2)
+      border-radius: 50%
+      // font-size: 16px
+      line-height: 48px
+      text-align: center
+
+
+    &-inner
+      padding: 45px
+      text-align: center
+      .services__item-title
+        color: $main-color
+
+  &__item-descr
+    position: absolute
+    overflow: hidden
+    display: none
+    top: 70px
+    left: 50%
+    transform: translateX(-50%)
+    width: 370px
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15)
+    border-radius: 5px
+    background-color: #ffffff
