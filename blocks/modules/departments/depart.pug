@@ -1,0 +1,28 @@
+-var deps = ['Nuclear Magnetic', 'Dental Clinic', 'Traumatology Center', 'Cardiology Center', 'Pregnancy Center', 'Traumatology Center'];
+section#depart.depart
+  header.section-header
+    span.section-subtitle.section-subtitle--color Treat With  <span class="section-subtitle__last">Medicative</span>
+    h2.section-title Medicative departments
+
+  .depart__content
+    ul.depart__list
+      each val, index in deps
+        if index == 0
+          li(data-descr="departDescr" + index).depart__item.depart__item--accent= val
+        else
+          li(data-descr="departDescr" + index).depart__item= val
+        
+    .depart__descr
+      each val, index in deps
+        if index == 0
+          div(id="departDescr" + index)
+            span.depart__descr-title= val
+            p.depart__descr-text We are an inventive organization. We've won a huge amount of grants and been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete. 
+            ul
+              li Highlighted in the greater part of the digital world. Gave with high.
+              li We have given best in addition to moderate programming improvement
+              li Offering powerful programming improvement arrangements.           
+        //- else
+        //-   div(id="departDescr" + index)= val
+    
+    .depart__graph

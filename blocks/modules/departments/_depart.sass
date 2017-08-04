@@ -1,0 +1,102 @@
+.depart
+  &__content
+    padding-top: 65px
+    +row-flex
+    +wrapper
+    +justify-content(space-between)
+
+  &__list
+    font-size: 16px
+    font-family: $medium-font
+    color: $title-color
+    position: relative
+    @media screen and (max-width: 720px)
+      margin-bottom: 60px
+      width: 100%
+      &::after
+        right: 60px
+    &::after
+      position: absolute
+      content: ''
+      height: 97%
+      width: 2px
+      background-color: #f0f0f0
+      top: 0
+      right: -60px
+  &__item
+    margin-bottom: 25px
+    cursor: pointer
+    position: relative
+    @media screen and (max-width: 720px)
+      width: 100%
+      &::after
+        right: 51px
+    &::after
+      position: absolute
+      content: ''
+      +sizer(16px)
+      border: 2px solid #e1e1e1
+      background-color: #fff
+      border-radius: 50%
+      top: 0
+      right: -69px
+      z-index: 5
+    &:hover, &--accent
+      color: $main-color
+      &::after
+        border-color: $main-color
+      &::before
+        position: absolute
+        content: ''
+        +sizer(8px)
+        border-radius: 50%
+        background-color: $main-color
+        top: 6px
+        z-index: 6
+        right: -63px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__descr
+    +col
+    +size(6)
+    +size-sm(12)
+    +desktop-max
+      +flex-grow(1)
+      margin-left: 120px
+    @media screen and (max-width: 720px)
+      margin-left: 0
+    &-text
+      line-height: 27px
+      margin-bottom: 25px
+    &-title
+      display: block
+      color: $main-color
+      font-size: 20px
+      font-family: $medium-font
+    li
+      position: relative
+      padding-left: 30px
+      margin-bottom: 10px
+      &::before
+        content: '+'
+        text-align: center
+        line-height: 17px
+        font-weight: bold
+        display: inline-block
+        +sizer(14px)
+        font-size: 13px
+        border-radius: 5px
+        background: $main-color
+        color: #fff
+        position: absolute
+        top: 5px
+        left: 0px
+  &__graph
+    +sizer(270px)
+    background-image: url(../img/Flatline.jpg)
+    background-size: cover
+    background-position: center
+    +desktop-max
+      display: none
