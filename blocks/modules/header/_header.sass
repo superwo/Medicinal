@@ -34,6 +34,7 @@
       color: darken(#a3c5f7, 5%)
 
 .socials
+
   &__item
     display: inline-block
     &:last-child
@@ -53,6 +54,14 @@
     &:hover
       background-color: $accent-color
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+      color: #fff
+.socials--big-white
+  a
+    +sizer(40px)
+    background-color: #fff
+    color: $main-color
+    line-height: 44px
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2)
 
 .top-menu
   height: 100px
