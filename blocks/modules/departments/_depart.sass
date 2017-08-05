@@ -100,3 +100,42 @@
     background-position: center
     +desktop-max
       display: none
+
+.banner
+  background-color: #faf7ed
+  margin-top: 115px
+  &__container
+    +wrapper
+    background-image: url(../img/doctor.png)
+    padding: 125px 0 130px
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: bottom right
+
+  &__text
+    max-width: 680px
+    text-align: center
+
+  &__title
+    font-family: $medium-font
+    font-size: 48px
+    color: $main-color
+    display: block
+    margin-bottom: 5px
+  &__subtitle
+    display: block
+    font-family: $light-font
+    color: $title-color
+    font-size: 26px
+
+  &__cta
+    font-family: $light-font
+    color: $title-color
+    font-size: 18px
+    display: block
+    margin-bottom: 30px
+    strong
+      font-style: normal
+      font-size: 26px
+      color: $accent-color
+      font-family: $medium-font
