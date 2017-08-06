@@ -1,0 +1,17 @@
+section#news.latest-news
+  header.section-header
+    span.section-subtitle.section-subtitle--color From  <span class="section-subtitle__last">Our Blog</span>
+    h2.section-title Latest News
+
+  ul.news.latest-news__list
+    each val in ['n1', 'n2', 'n3']
+      li.news__item
+        .news__item-img(style="background-image: url(img/news/"+val+".jpg)")
+        .news__item-content
+          span.news__item-date 25 Jun
+          ul.news__item-tags
+            li <i class="fa fa-user" aria-hidden="true"></i> Shakib
+            li <i class="fa fa-book" aria-hidden="true"></i> Cardiology
+          span.news__item-title Donec venenatis turpis
+          p.news__item-text We are an inventive organization thay We've won a huge amount of grants and have been thay highlighted.
+          a(href="#").news__item-more Reading...
