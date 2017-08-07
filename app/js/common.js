@@ -13,4 +13,10 @@ $(function() {
 		items: 5,
 		autoplay: true
 	});
+
+	var upButton = $('.up-button');
+	upButton.on('click', function(event) {
+		event.preventDefault();
+		$("html, body").animate({ scrollTop: 0 }, 600);
+	});
 });

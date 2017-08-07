@@ -1,2 +1,55 @@
-footer.mainfooter
-  p footer
+footer#mainfooter.mainfooter
+  .mainfooter__content
+    .mainfooter__descr
+      a(href="#").mainfooter__logo
+        img(src="img/logo2.png")
+      p All of our team members come from diverse cultural and business back grounds and have worked among many businesses.
+      ul.contacts.contacts--column
+        li.contacts__item.contacts__item--phone
+          a(href="tel:00893434895463") +8934-3489-5463
+        li.contacts__item.contacts__item--email
+          a(href="mailto:support@email.com") support@email.com
+        li.contacts__item.contacts__item--place
+          a(href="#") 357 Donia, Jatrabari, Dhaka 1236
+          
+    .mainfooter__menu
+      h4.mainfooter__title A usefull LINKS
+      ul.mainfooter__menu-list
+        li.mainfooter__menu-item
+          a(href="#") About Us
+        li.mainfooter__menu-item
+          a(href="#") Departments
+        li.mainfooter__menu-item
+          a(href="#") Our Doctors
+        li.mainfooter__menu-item
+          a(href="#") Working Hours
+        li.mainfooter__menu-item
+          a(href="#") Our service
+        li.mainfooter__menu-item
+          a(href="#") Online Bill Pay
+
+    .mainfooter__gallery
+      h4.mainfooter__title Flickr Gallery
+      ul.mainfooter__gallery-list
+        -for(var i=0; i<6; i++)
+          li.mainfooter__gallery-item
+            a(href="#")
+              img(src="img/div/d" + i + ".jpg")
+      
+    .mainfooter__newsletter
+      h4.mainfooter__title Subscribe
+      form.mainfooter__form
+        label(for="NewsEmail") Subscribe to the newsletter
+        .mainfooter__form-control
+          input(type="email", id="NewsEmail", placeholder="Your email here")
+      ul.socials.socials--big-gray
+        li.socials__item.socials__item--f <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        li.socials__item.socials__item--tw <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        li.socials__item.socials__item--g <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+        li.socials__item.socials__item--p <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+        li.socials__item.socials__item--in <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+
+  .mainfooter__copyright
+    span ©2016 Medicative. All rights reserved. Theme by Theme-Valley
+
+  button.up-button <i class="fa fa-arrow-up" aria-hidden="true"></i>

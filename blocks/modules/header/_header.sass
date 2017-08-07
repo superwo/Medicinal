@@ -7,6 +7,9 @@
     align-items: center
     height: 100%
 .contacts
+  &--column
+    .contacts__item
+      display: block
   &__item
     display: inline-block
     &--phone
@@ -17,6 +20,10 @@
       a
         &::before
           content: '\f199'
+    &--place
+      a
+        &::before
+          content: '\f041'
   a
     color: #a3c5f7
     transition: all 200ms ease
@@ -62,6 +69,16 @@
     color: $main-color
     line-height: 44px
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2)
+.socials--big-gray
+  a
+    +sizer(40px)
+    background-color: #2b333f
+    margin-bottom: 15px
+    color: #fff!important
+    line-height: 44px
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2)
+    &:hover
+      background-color: $main-color
 
 .top-menu
   height: 100px

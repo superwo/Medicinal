@@ -1,0 +1,165 @@
+.mainfooter__title
+  display: block
+  font-family: $medium-font
+  font-size: 18px
+  white-space: nowrap
+  color: #fff
+  text-transform: uppercase
+  position: relative
+  margin-top: 0px
+  margin-bottom: 72px
+  line-height: 1.5
+  &::after
+    position: absolute
+    display: block
+    content: ''
+    bottom: -22px
+    left: 0
+    background: url(../img/underline.png) no-repeat
+    +sizer(37px, 14px)
+
+.mainfooter
+  position: relative
+  background-color: #1a1f26
+  &__content
+    +row-flex
+    +wrapper
+    +justify-content(space-between)
+    color: #868686
+    padding: 120px 0
+    a
+      color: #868686
+      &:hover
+        color: #fff
+
+  &__descr, &__menu, &__gallery, &__newsletter
+    +col()
+    +size(3)
+    +size-md(6)
+    +size-xs(12)
+
+  &__logo
+    display: block
+    margin-bottom: 50px
+  &__descr
+    +laptop-max
+      margin-bottom: 100px
+    +tablets-max
+      margin-bottom: 60px
+    p
+      line-height: 28px
+      margin-bottom: 20px
+
+  &__menu
+    +tablets-max
+      margin-bottom: 60px
+    &-item
+      position: relative
+      &::before
+        font-family: awesome
+        content: '\f0da'
+        display: inline-block
+        margin-right: 15px
+        margin-bottom: 15px
+
+  &__gallery
+    +tablets-max
+      margin-bottom: 60px
+    &-item
+      margin-right: 2px
+      overflow: hidden
+      display: inline-block
+      position: relative
+      +sizer(87px, 78px)
+      background-color: #fff
+      cursor: pointer
+      a
+        display: block
+        height: 78px
+        img
+          display: block
+          height: 100%
+          width: auto
+
+      &:hover
+        &::after
+          opacity: 1
+      &::after
+        transition: all 200ms ease-in-out
+        opacity: 0
+        content: '\f00e'
+        font-family: awesome
+        font-size: 17px
+        pointer-events: none
+        text-align: center
+        +coverdiv
+        background-color: $main-color
+        color: #fff
+        text-align: center
+        line-height: 78px
+
+  &__form
+    border-bottom: 1px solid #323c4a
+    padding-bottom: 35px
+    margin-bottom: 33px
+    *::-webkit-input-placeholder
+    	color: #a2a2a2
+    	opacity: 1
+
+    *:-moz-placeholder
+    	color: #a2a2a2
+    	opacity: 1
+
+    *::-moz-placeholder
+    	color: #a2a2a2
+    	opacity: 1
+
+    *:-ms-input-placeholder
+    	color: #a2a2a2
+    	opacity: 1
+    label
+      display: block
+      color: #a2a2a2
+      margin-bottom: 25px
+      line-height: 1
+    input
+      border: none
+      box-sizing: border-box
+      padding: 18px 40px 18px 18px
+      background-color: #2b333f
+    &-control
+      position: relative
+      &::after
+        content: '\f1d8'
+        display: block
+        position: absolute
+        top: 15px
+        right: 15px
+        font-family: awesome
+        color: #fff
+
+  &__copyright
+    background-color: #0e141b
+    text-align: center
+    color: #a7a7a7
+    padding: 38px
+
+.up-button
+  border: none
+  +sizer(50px)
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25)
+  background-color: $accent-color
+  color: #fff
+  text-align: center
+  line-height: 50px
+  font-size: 16px
+  border-radius: 50%
+  position: absolute
+  top: -25px
+  left: 50%
+  transform: translateX(-50%)
+  transition: all 200ms ease-in-out
+  outline: none
+  cursor: pointer
+  &:hover
+    background-color: $main-color
