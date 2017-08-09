@@ -82,7 +82,16 @@
 
 .top-menu
   height: 100px
+  transition: all 300ms ease
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15)
+  &.stuck
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 200
+    height: 60px
+    background-color: #fff
   .logo
     margin-right: auto
   .container

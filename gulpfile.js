@@ -41,6 +41,8 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		paths.devDir + 'libs/jquery/dist/jquery.min.js',
+		paths.devDir + 'libs/waypoints/lib/jquery.waypoints.js',
+		paths.devDir + 'libs/waypoints/lib/shortcuts/sticky.js',
 		paths.devDir + 'libs/owl.carousel/dist/owl.carousel.min.js',
 		paths.devDir + 'js/common.min.js', // Всегда в конце
 		])

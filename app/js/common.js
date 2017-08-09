@@ -1,5 +1,10 @@
 $(function() {
 
+	// Sticky main navigation
+	var sticky = new Waypoint.Sticky({
+	  element: $('.top-menu')[0]
+	});
+
 	// Services Items
 	var servicesItems = $('.services__item');
 
