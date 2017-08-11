@@ -33,6 +33,19 @@
     +justify-content(space-between)
 
   &__list
+    +desktop-max
+      margin-right: 25%
+      &--right
+        .services__item
+          text-align: right
+          padding-right: 80px
+          padding-left: 0px
+          &-icon
+            right: 0
+            left: auto
+    @media screen and (max-width: 830px)
+      padding-top: 530px
+      margin-right: 0
     &--right
       .services__item
         text-align: left
@@ -50,6 +63,13 @@
     cursor: pointer
     &--active + .services__item-descr
       display: block
+    @media screen and (max-width: 830px)
+      text-align: center
+      padding-right: 0
+      padding-left: 80px
+      &-icon
+        right: auto
+        left: 0
 
     &:hover, &--active
       .services__item-icon
@@ -119,3 +139,10 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15)
     border-radius: 5px
     background-color: #ffffff
+    +desktop-max
+      left: auto
+      right: 0
+    +laptop-max
+      right: -15%
+    @media screen and (max-width: 830px)
+      left: 50%

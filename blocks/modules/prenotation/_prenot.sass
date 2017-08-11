@@ -4,10 +4,22 @@
     +row-flex()
     +wrapper()
     +justify-content(space-between)
+    +tablets-max
+      +justify-content(center)
   &__form
+    +col
     +size(8)
+    +size-md(12)
+    @media screen and (max-width: 993px)
+      margin-bottom: 40px
   &__hours
+    +col
     +size(4)
+    +size-md(8)
+    +size-sm(12)
+    @media screen and (max-width: 993px)
+      .box
+        margin-top: 0
   .box
     z-index: 100
     position: relative
